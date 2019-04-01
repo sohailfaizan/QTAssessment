@@ -5,7 +5,6 @@ VOLUME /tmp
 
 # Delete existing ROOT folder
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
-
-RUN mkdir -p /usr/local/tomcat
 ADD ROOT.war /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
+EXPOSE 8080
